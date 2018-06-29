@@ -20,7 +20,15 @@ def monsterAttrCheckResult(allExcelDictData):
     if usefulData:
         for iKey, iValue in usefulData.items():
             if iKey != "lv":
+                testList = [i for i in range(1,len(iValue)+1)]
+                if testList != iKey:
+                    pass
+                else:
+                    continue
                 pass
+            else:
+                pass
+
 
 
 
