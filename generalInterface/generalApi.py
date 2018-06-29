@@ -21,12 +21,8 @@ def saveData2Dict(singleSheetData, resultDict):
 
 # 对字典中的无效数据进行过滤
 def delInvalidData(resultDict):
-    for iKey, iValue in resultDict.items():
-        if isAllZero(iValue):
-            resultDict.pop(iKey)
-        else:
-            continue
-    return resultDict
+    return {iKey:iValue for iKey, iValue in resultDict.items() if not isAllZero(iValue)}
+
 
 # 判断列表中的数据是否全部为0，是的话返回True，否者返回False
 def isAllZero(iList):
@@ -40,3 +36,19 @@ def isAllZero(iList):
         return True
     else:
         return False
+
+
+# 比较两个列表，并查处两个列表的第一个不一样的地方，若全部一样，返回Fasle，反之，返回具体不一样的位置
+def compare2List(dataList, testList):
+    for i in range(len(dataList)):
+        if (dataList[i] != testList[i]):
+            return dataList.index(dataList[i])+1
+        else:
+            continue
+    return False
+
+
+# 查找列表中出现错误的具体位置
+def findErrorLocation(dataList):
+
+    pass
