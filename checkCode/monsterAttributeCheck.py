@@ -8,10 +8,19 @@ def getMonsterAttributeData(allExcelDictData):
     if monsterAttributeData:
         dataDict = createCheckDict(monsterAttributeData[0])
         usefulDataDict = saveData2Dict(monsterAttributeData, dataDict)
-        print("$$$$$$$$$ ", usefulDataDict)
+        return usefulDataDict
+    else:
+        return False
 
 
-
+# 检查数据的合法性
+def monsterAttrCheckResult(allExcelDictData):
+    result = []
+    usefulData = getMonsterAttributeData(allExcelDictData)
+    if usefulData:
+        for iKey, iValue in usefulData.items():
+            if iKey != "lv":
+                pass
 
 
 
