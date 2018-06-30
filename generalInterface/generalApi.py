@@ -50,19 +50,29 @@ def compare2List(dataList, testList):
 
 # 查找除等级列表外的列表中出现错误的具体位置
 def findNoLvErrorLocation(dataList):
+    result = []
     for i in range(1,len(dataList)-1):
         if (dataList[i] < dataList[i-1]):
-            return i+1
+            result.append(i+1)
         else:
             continue
+    return result
 
 #查找等级列表中出现的错误位置
 def findLvErrorLocation(dataList):
-    for i in range(1,len(dataList)-1):
-        if (dataList[i] <= dataList[i-1]):
-            return i+1
+    result = []
+    for i in range(len(dataList)):
+        if (dataList[i] != i+1):
+            result.append(i+1)
         else:
             continue
+    return result
+
+    # for i in range(1,len(dataList)-1):
+    #     if (dataList[i] <= dataList[i-1]):
+    #         return i+1
+    #     else:
+    #         continue
 
 
 
