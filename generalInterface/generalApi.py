@@ -51,9 +51,10 @@ def compare2List(dataList, testList):
 # 查找除等级列表外的列表中出现错误的具体位置
 def findNoLvErrorLocation(dataList):
     result = []
-    for i in range(1,len(dataList)-1):
+    for i in range(1,len(dataList)):
+        # print("@@@@@@@@@  ",i, "  @@@@  ", dataList[i],"  @@@@ ", dataList[i-1])
         if (dataList[i] < dataList[i-1]):
-            result.append(i+1)
+            result.append(i)
         else:
             continue
     return result
@@ -63,16 +64,21 @@ def findLvErrorLocation(dataList):
     result = []
     for i in range(len(dataList)):
         if (dataList[i] != i+1):
-            result.append(i+1)
+            result.append(i)
         else:
             continue
     return result
 
-    # for i in range(1,len(dataList)-1):
-    #     if (dataList[i] <= dataList[i-1]):
-    #         return i+1
-    #     else:
-    #         continue
 
+# 获得当前游戏中玩家可以达到的最高等级
+def getPlayerLvMax(allExcelDictData):
+    serverLvData = allExcelDictData.get("服务器等级", None)
+    if serverLvData:
+        tempDict = createCheckDict(serverLvData[0])
+        usefulData = saveData2Dict(serverLvData, tempDict)
+        playerLvMax = usefulData.get("player_level_max", None)
+        return playerLvMax[-1]
+    else:
+        return False
 
 
