@@ -48,24 +48,37 @@ def compare2List(dataList, testList):
     return False
 
 
-# 查找除等级列表外的列表中出现错误的具体位置
+# 查找除等级列表外的列表中（列表中可以出现相等的情况）出现错误的具体位置
 def findNoLvErrorLocation(dataList):
     result = []
     for i in range(1,len(dataList)):
         # print("@@@@@@@@@  ",i, "  @@@@  ", dataList[i],"  @@@@ ", dataList[i-1])
         if (dataList[i] < dataList[i-1]):
-            result.append(i + 3)
+            result.append(i + 4)
             # result.append(i)
         else:
             continue
     return result
 
+
+# 查找除等级外列表外（并且列表中不能出现相等的情况）出现错误的具体位置
+def findNoLvNoEqualErrorLocation(dataList):
+    result = []
+    for i in range(1, len(dataList)):
+        if (dataList[i] <= dataList[i-1]):
+            result.append(i + 4)
+        else:
+            continue
+    return result
+
+
 #查找等级列表中出现的错误位置
 def findLvErrorLocation(dataList):
     result = []
     for i in range(len(dataList)):
+        print("%%%",dataList[i], "####",i+1)
         if (dataList[i] != i+1):
-            result.append(i + 3)
+            result.append(i + 4)
             # result.append(i)
         else:
             continue
@@ -94,4 +107,12 @@ def getPlayerLvMax(allExcelDictData):
     else:
         return False
 
-
+# 检查列表中的元素是否都与ID相等，不相等返回出错的位置
+def checkPointID(pointList, ID):
+    result = []
+    for i in range(len(pointList)):
+        if pointList[i] != ID:
+            result.append(i+4)
+        else:
+            continue
+    return result

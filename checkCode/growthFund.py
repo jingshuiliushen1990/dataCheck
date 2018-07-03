@@ -1,85 +1,56 @@
 #-*- coding:utf-8 -*-
 
-
-# 检查等级的唯一性
-def checkLvUnique(growthFundData):
-    result = []
-    levelUnique = []
-    for i in growthFundData:
-        levelUnique.append(i["lv"])
-    for j in levelUnique:
-        if levelUnique.count(j) > 1:
-            if j not in result:
-                result.append(j)
-            else:
-                continue
-        else:
-            continue
-    if result:
-        return result
-    else:
-        return False
-
-
-# 检查ID的唯一性
-def checkIdUnique(growthFundData):
-    result = []
-    idUnique = []
-    for i in growthFundData:
-        idUnique.append(i["id"])
-    for j in idUnique:
-        if idUnique.count(j) > 1:
-            if j not in result:
-                result.append(j)
-            else:
-                continue
-        else:
-            continue
-    if result:
-        return result
-    else:
-        return False
-
-# 获得等级列表
-def getLvList(growthFundData):
-    result = []
-    for i in growthFundData:
-        result.append(i["lv"])
-    return result
-
-
-# 比较两个字典中物品的数量是否满足高等级的奖励物品数量要不小于低等级的物品数量
-def judgeAmount(iList1, iList2):
-    len1 = len(iList1)
-    len2 = len(iList2)
-    if(len1 == len2):
-        pass
-
-
-
-
-# 获得每个等级配置的数据，格式为： {编号,等级}：[{物品ID，物品数量}]，然后检查数据是否异常
-def checkReward(growthFundData):
-    tempDict = {}
-    for i in growthFundData:
-        tempDict[i["lv"]] = i["rewards"]
-    print("#####", tempDict)
-    lvList = getLvList(growthFundData)
-    print("&&&&&", lvList)
-    for i in range(len(lvList)-1):
-        temp1 = tempDict.get(lvList[i], None)
-        temp2 = tempDict.get(lvList[i+1], None)
-        if judgeAmount(temp1, temp2):
-            pass
-
-
-
+from generalInterface.generalApi import *
 
 # 得到检查结果，先判断是否有ID和等级异常的，有的话直接返回异常，没有的话在判断奖励数量是否存在异常
 def checkGrowthFundResult(allExcelDictData):
-    result = []
+    result = {}
+    tempResult = []
+    count = 0
     growthFundData = allExcelDictData.get("成长基金等级", None)
-    checkReward(growthFundData)
+    keyDict = createCheckDict(growthFundData[0])
+    usefulData = saveData2Dict(growthFundData, keyDict)
+    # print("&&&&&&&&&", usefulData)
+    checkKeyDict = {"id":"编号", "lv":"等级"}
+    for ikey in checkKeyDict.keys():
+        errorLocation = []
+        testData = usefulData[ikey]
+        if ikey == "id":
+            errorLocation = findLvErrorLocation(testData)
+        else:
+            errorLocation = findNoLvNoEqualErrorLocation(testData)
+        if errorLocation:
+            count += 1
+            wrongInfo = str(count) + ". 成长基金等级表中 "+str(checkKeyDict[ikey])+" 列中出现异常情况，位置是 "+str(errorLocation)+" 行，请策划确认是否正确。\n"
+            tempResult.append(wrongInfo)
+
+    rewardData = preprocessRewardList(usefulData["rewards"])
+    secondKeyDict = createCheckDict(rewardData[0])
+    secondUsefulData = saveData2Dict(rewardData, secondKeyDict)
+    rewardIDErrorLocation = checkPointID(secondUsefulData["id"], 1002)
+    if rewardIDErrorLocation:
+        count += 1
+        wrongInfo = str(count) + ". 成长基金等级 表中返还货币ID不是 1002 ，出现位置是: " + str(rewardIDErrorLocation) + " 行， 请策划确认是否正常。\n"
+        tempResult.append(wrongInfo)
+    rewardAmountErrorLocation = findNoLvErrorLocation(secondUsefulData["amount"])
+    if rewardAmountErrorLocation:
+        count += 1
+        wrongInfo = str(count) + ". 成长基金等级 表中返还货币数量异常 ，出现位置是: " + str(rewardAmountErrorLocation) + " 行， 请策划确认是否正常。\n"
+        tempResult.append(wrongInfo)
+
+    if tempResult:
+        result["成长基金等级"] = tempResult
+        return result
+    else:
+        return False
+
+
+# 预处理奖励列表
+def preprocessRewardList(rewardList):
+    result = []
+    for i in rewardList:
+        result.append(i[0])
+    return result
 
 
 if __name__ == "__main__":

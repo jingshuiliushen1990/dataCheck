@@ -107,16 +107,6 @@ def dailyRewardCheckResult(allExcelDictData):
             return False
 
 
-# 检查积分ID是否正确，不正确返回出错的位置
-def checkPointID(pointList, ID):
-    result = []
-    for i in range(len(pointList)):
-        if pointList[i] != ID:
-            result.append(i+4)
-        else:
-            continue
-    return result
-
 
 if __name__ == "__main__":
     from dataPreprocess.loadAllDictData import allExcelDictData
