@@ -42,8 +42,11 @@ def checkLvProsperityResult(allExcelDictData):
         count += 1
         wrongInfo = str(count) + ". 玩家领奖等级存在异常，领奖等级大于玩家可以达到的最高等级，请确认。\n"
         tempList.append(wrongInfo)
-    result["王国纪元录"] = tempList
-    return result
+    if tempList:
+        result["王国纪元录"] = tempList
+        return result
+    else:
+        return False
 
 
 # 检查王国时间抽取功能a

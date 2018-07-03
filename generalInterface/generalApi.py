@@ -70,6 +70,16 @@ def findLvErrorLocation(dataList):
     return result
 
 
+# 查找从大到小排序的序列中的异常数据
+def findReverseErrorLocation(dataList):
+    result = []
+    for i in range(len(dataList)-1):
+        if(dataList[i] < dataList[i+1]):
+            result.append(i)
+        else:
+            continue
+    return result
+
 # 获得当前游戏中玩家可以达到的最高等级
 def getPlayerLvMax(allExcelDictData):
     serverLvData = allExcelDictData.get("服务器等级", None)
