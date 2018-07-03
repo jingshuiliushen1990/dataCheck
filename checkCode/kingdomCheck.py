@@ -5,7 +5,12 @@ from generalInterface.generalApi import *
 # 对王国纪元功能的检查
 def kingdomCheckResult(allExcelDictData):
     result = {}
-    result = checkLvProsperityResult(allExcelDictData)
+    tempResult1  = checkLvProsperityResult(allExcelDictData)
+    tempResult2 = checkEventExtractResult(allExcelDictData)
+    if tempResult1:
+        result.update(tempResult1)
+    if tempResult2:
+        result.update(tempResult2)
     return result
 
 
@@ -41,10 +46,74 @@ def checkLvProsperityResult(allExcelDictData):
     return result
 
 
-# 检查王国时间抽取功能
+# 检查王国时间抽取功能a
 def checkEventExtractResult(allExcelDictData):
+    result = {}
+    tempDict = {}
+    dayCheckList = []
+    tempList = []
+    kingdomEventData = allExcelDictData.get("王国事件抽取", None)
+    for i in kingdomEventData:
+        dayCheckList.append(i.get("open_day",None))
+    # print("@@@@@@",dayCheckList)
+    tempResult = checkOpenDay(dayCheckList)
+    # print("&&&&&&",tempResult)
+    if tempResult:
+        count = 1
+    else:
+        count = 0
+    for j in kingdomEventData:
+        tempDict[j["open_day"]] = []
+        for iKey, iValue in j.items():
+            if iKey != "open_day":
+                tempDict[j["open_day"]].append(iValue)
+        if checkAllEqual(tempDict[j["open_day"]]):
+            tempList.append(tempDict[j["open_day"]][0])
+        else:
+            count += 1
+            wrongInfo = str(count)+". 开服天数为 "+str(j["open_day"])+" 的王国事件配置的event 1~~7 不是一样的，出现不一致，请检查。\n"
+            tempResult.append(wrongInfo)
+    if not checkTwoList(tempList[:-1], tempList[-1]):
+        # print("$$$$$$$", tempList[:-1], " ******** ",tempList[-1])
+        count += 1
+        wrongInfo = str(count)+". 最后一行的的王国事件不是由前面几天的事件组成，请与策划确认。\n"
+        tempResult.append(wrongInfo)
+    if tempResult:
+        result["王国事件抽取"] = tempResult
+        return result
+    else:
+        return False
 
-    pass
+
+# 判断列表中的所有元素都是一样的
+def checkAllEqual(iList):
+    if (iList.count(iList[0]) == len(iList)):
+        return True
+    else:
+        return False
+
+# 判断两个列表中的元素都一样，元素顺序可能会不一样
+def checkTwoList(iList1, iList2):
+    if len(iList1) != len(iList2):
+        return False
+    else:
+        for i in iList1:
+            if i[0] not in iList2:
+                return False
+            else:
+                continue
+        return True
+
+
+# 检查王国事件的开启时间是否存在重复或者间隔的现象
+def checkOpenDay(dayList):
+    result = []
+    tempList = dayList[:-1]
+    testList = [i for i in range(1, len(tempList)+1)]
+    if ((tempList != testList) or (dayList[-1] != 999999)):
+        wrongInfo = "1. 开服天数出现异常，出现天数不连续，或者最后一个配置的不是999999，请查证。"
+        result.append(wrongInfo)
+    return result
 
 
 if __name__ == "__main__":
