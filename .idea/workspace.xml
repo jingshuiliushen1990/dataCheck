@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="206ed45a-61d0-4b0c-92f4-2035ec20974b" name="Default" comment="完成天赋技能检查">
+    <list default="true" id="206ed45a-61d0-4b0c-92f4-2035ec20974b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkCode/kingdomCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/kingdomCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/开发情况.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/开发情况.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkCode/arenaCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/arenaCheck.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generalInterface/generalApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/generalInterface/generalApi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,13 +18,14 @@
     <SUITE FILE_PATH="coverage/M1P3Tool$loadAllDictData.coverage" NAME="loadAllDictData Coverage Results" MODIFIED="1527311059839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
     <SUITE FILE_PATH="coverage/M1P3Tool$roleLvCheck.coverage" NAME="roleLvCheck Coverage Results" MODIFIED="1530355783437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
     <SUITE FILE_PATH="coverage/M1P3Tool$npcChallengeCheck.coverage" NAME="npcChallengeCheck Coverage Results" MODIFIED="1530352388837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
-    <SUITE FILE_PATH="coverage/M1P3Tool$kingdomCheck.coverage" NAME="kingdomCheck Coverage Results" MODIFIED="1530609421327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
+    <SUITE FILE_PATH="coverage/M1P3Tool$kingdomCheck.coverage" NAME="kingdomCheck Coverage Results" MODIFIED="1530610212390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
     <SUITE FILE_PATH="coverage/M1P3Tool$tradeCheck.coverage" NAME="tradeCheck Coverage Results" MODIFIED="1530352235764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
     <SUITE FILE_PATH="coverage/M1P3Tool$getFilePath.coverage" NAME="getFilePath Coverage Results" MODIFIED="1526624962017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
     <SUITE FILE_PATH="coverage/M1P3Tool$growthFund.coverage" NAME="growthFund Coverage Results" MODIFIED="1527942432896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/serviceCode" />
     <SUITE FILE_PATH="coverage/M1P3Tool$titleCheck.coverage" NAME="titleCheck Coverage Results" MODIFIED="1527915844774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/serviceCode" />
     <SUITE FILE_PATH="coverage/M1P3Tool$talentSkillCheck.coverage" NAME="talentSkillCheck Coverage Results" MODIFIED="1530355816762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
     <SUITE FILE_PATH="coverage/M1P3Tool$main.coverage" NAME="main Coverage Results" MODIFIED="1530018956655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/M1P3Tool$arenaCheck.coverage" NAME="arenaCheck Coverage Results" MODIFIED="1530619525231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
     <SUITE FILE_PATH="coverage/M1P3Tool$extract.coverage" NAME="extract Coverage Results" MODIFIED="1526625816630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
     <SUITE FILE_PATH="coverage/M1P3Tool$loadAllData.coverage" NAME="loadAllData Coverage Results" MODIFIED="1527164949096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
     <SUITE FILE_PATH="coverage/M1P3Tool$shopCheck.coverage" NAME="shopCheck Coverage Results" MODIFIED="1530515272401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
@@ -51,26 +52,8 @@
       <file leaf-file-name="growthFund.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkCode/growthFund.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shopCheck.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkCode/shopCheck.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kingdomCheck.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/checkCode/kingdomCheck.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="68" column="54" lean-forward="true" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="54" />
+            <state relative-caret-position="399">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -78,8 +61,26 @@
       <file leaf-file-name="generalApi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generalInterface/generalApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1083">
-              <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+            <state relative-caret-position="375">
+              <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kingdomCheck.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/checkCode/kingdomCheck.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="27" column="65" lean-forward="true" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arenaCheck.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/checkCode/arenaCheck.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="741">
+              <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -172,8 +173,9 @@
         <option value="$PROJECT_DIR$/checkCode/talentSkillCheck.py" />
         <option value="$PROJECT_DIR$/checkCode/shopCheck.py" />
         <option value="$PROJECT_DIR$/setuplog.txt" />
-        <option value="$PROJECT_DIR$/generalInterface/generalApi.py" />
         <option value="$PROJECT_DIR$/checkCode/kingdomCheck.py" />
+        <option value="$PROJECT_DIR$/generalInterface/generalApi.py" />
+        <option value="$PROJECT_DIR$/checkCode/arenaCheck.py" />
       </list>
     </option>
   </component>
@@ -246,7 +248,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.kingdomCheck">
+  <component name="RunManager" selected="Python.arenaCheck">
+    <configuration name="arenaCheck" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="M1P3Tool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/checkCode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/checkCode/arenaCheck.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="kingdomCheck" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="M1P3Tool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -280,25 +301,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="C:\Users\leijing\Desktop\M1P3Tool\source\loadAllExcelData.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="npcChallengeCheck" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="M1P3Tool" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/checkCode" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/checkCode/npcChallengeCheck.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -403,18 +405,18 @@
       <item itemvalue="Python.xls2lua" />
       <item itemvalue="Python.loadAllData" />
       <item itemvalue="Python.roleLvCheck" />
-      <item itemvalue="Python.npcChallengeCheck" />
       <item itemvalue="Python.talentSkillCheck" />
       <item itemvalue="Python.shopCheck" />
       <item itemvalue="Python.kingdomCheck" />
+      <item itemvalue="Python.arenaCheck" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.arenaCheck" />
         <item itemvalue="Python.kingdomCheck" />
         <item itemvalue="Python.shopCheck" />
         <item itemvalue="Python.talentSkillCheck" />
         <item itemvalue="Python.roleLvCheck" />
-        <item itemvalue="Python.npcChallengeCheck" />
       </list>
     </recent_temporary>
   </component>
@@ -471,7 +473,21 @@
       <option name="project" value="LOCAL" />
       <updated>1530355901099</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="完成王国事件的检查">
+      <created>1530609501632</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1530609501632</updated>
+    </task>
+    <task id="LOCAL-00008" summary="完成个人竞技场的检查">
+      <created>1530618845086</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1530618845086</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -492,7 +508,7 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.49692908" weight="0.21943574" />
-      <window_info active="true" anchor="bottom" x="-1798" y="324" width="1474" height="596" id="Run" order="6" type="WINDOWED" visible="true" weight="0.5015432" />
+      <window_info active="true" anchor="bottom" x="-1144" y="348" width="911" height="534" id="Run" order="6" type="WINDOWED" visible="true" weight="0.5015432" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15075377" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -512,27 +528,27 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15075377" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.160893" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" x="-1699" y="178" width="1025" height="773" id="Run" order="6" type="WINDOWED" weight="0.5015432" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" x="138" y="219" width="1170" height="596" id="Run" order="6" type="WINDOWED" weight="0.5015432" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32985386" />
       <window_info anchor="right" id="Data View" order="0" />
-      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.49692908" weight="0.21943574" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32985386" />
-      <window_info anchor="bottom" id="Python Console" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5030709" side_tool="true" weight="0.33019853" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info id="Favorites" order="0" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,7 +563,9 @@
     <MESSAGE value="完成角色等级的检查" />
     <MESSAGE value="完成npc挑战数据检查&#10;完成交易数据检查" />
     <MESSAGE value="完成天赋技能检查" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成天赋技能检查" />
+    <MESSAGE value="完成王国事件的检查" />
+    <MESSAGE value="完成个人竞技场的检查" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成个人竞技场的检查" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -562,13 +580,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/checkCode/npcChallengeCheck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkCode/shopCheck.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -769,17 +780,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setuplog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkCode/npcChallengeCheck.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setuplog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -792,22 +803,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/checkCode/growthFund.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generalInterface/generalApi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+        <state relative-caret-position="399">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkCode/kingdomCheck.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="68" column="54" lean-forward="true" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="54" />
+        <state relative-caret-position="513">
+          <caret line="27" column="65" lean-forward="true" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generalInterface/generalApi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkCode/arenaCheck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
         </state>
       </provider>
     </entry>

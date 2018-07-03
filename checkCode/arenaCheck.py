@@ -33,11 +33,11 @@ def robotCheckResult(allExcelDictData):
         for ikey in keyList:
             checkData = usefulRobotData[ikey]
             location = findReverseErrorLocation(checkData)
-            print("#########", checkData, " *********", location)
+            # print("#########", checkData, " *********", location)
             if location:
                 count += 1
                 wrongInfo = str(count)+". 个人竞技场_机器人 表中 列名为 "+str(ikey)+" 的等级出现异常，异常位置在 "+ str(location)+\
-                "，请策划确认是否正常。\n"
+                "行，请策划确认是否正常。\n"
                 tempResult.append(wrongInfo)
             else:
                 continue
@@ -92,13 +92,13 @@ def dailyRewardCheckResult(allExcelDictData):
         pointLocation = checkPointID(pointId, 2001)
         if pointLocation:
             count += 1
-            wrongInfo = str(count) + ". 个人竞技场_每日奖励 表中积分奖励ID不是 2001 ，出现位置是: " + str(pointLocation) + "， 请策划确认是否正常。\n"
+            wrongInfo = str(count) + ". 个人竞技场_每日奖励 表中积分奖励ID不是 2001 ，出现位置是: " + str(pointLocation) + "行， 请策划确认是否正常。\n"
             tempResult.append(wrongInfo)
         amountList = usefulPointData["amount"]
         amountLocation = findReverseErrorLocation(amountList)
         if amountLocation:
             count += 1
-            wrongInfo = str(count) + ". 个人竞技场_每日奖励 表中积分奖励数量不是按照正常规则配置，出现位置是: " + str(pointLocation) + "， 请策划确认是否正常。\n"
+            wrongInfo = str(count) + ". 个人竞技场_每日奖励 表中积分奖励数量不是按照正常规则配置，出现位置是: " + str(amountLocation) + "行， 请策划确认是否正常。\n"
             tempResult.append(wrongInfo)
         if tempResult:
             result["个人竞技场_每日奖励"] = tempResult
@@ -110,9 +110,9 @@ def dailyRewardCheckResult(allExcelDictData):
 # 检查积分ID是否正确，不正确返回出错的位置
 def checkPointID(pointList, ID):
     result = []
-    for i in pointList:
-        if i != ID:
-            result.append(i)
+    for i in range(len(pointList)):
+        if pointList[i] != ID:
+            result.append(i+4)
         else:
             continue
     return result

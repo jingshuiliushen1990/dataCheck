@@ -54,7 +54,8 @@ def findNoLvErrorLocation(dataList):
     for i in range(1,len(dataList)):
         # print("@@@@@@@@@  ",i, "  @@@@  ", dataList[i],"  @@@@ ", dataList[i-1])
         if (dataList[i] < dataList[i-1]):
-            result.append(i)
+            result.append(i + 3)
+            # result.append(i)
         else:
             continue
     return result
@@ -64,7 +65,8 @@ def findLvErrorLocation(dataList):
     result = []
     for i in range(len(dataList)):
         if (dataList[i] != i+1):
-            result.append(i)
+            result.append(i + 3)
+            # result.append(i)
         else:
             continue
     return result
@@ -75,7 +77,8 @@ def findReverseErrorLocation(dataList):
     result = []
     for i in range(len(dataList)-1):
         if(dataList[i] < dataList[i+1]):
-            result.append(i)
+            # result.append(i+2)
+            result.append(i + 5)
         else:
             continue
     return result
