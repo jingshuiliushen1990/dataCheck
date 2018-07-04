@@ -3,7 +3,7 @@
 from generalInterface.generalApi import *
 
 # 得到检查结果，先判断是否有ID和等级异常的，有的话直接返回异常，没有的话在判断奖励数量是否存在异常
-def checkGrowthFundResult(allExcelDictData):
+def growthFundCheckResult(allExcelDictData):
     result = {}
     tempResult = []
     count = 0
@@ -55,4 +55,4 @@ def preprocessRewardList(rewardList):
 
 if __name__ == "__main__":
     from dataPreprocess.loadAllDictData import allExcelDictData
-    print(checkGrowthFundResult(allExcelDictData))
+    print(growthFundCheckResult(allExcelDictData))

@@ -13,17 +13,21 @@ def npcChallengeCheckResult(allExcelDictData):
 
 # 检查召唤场景是332101
 def checkCallScene(npcChallengeData):
-    result = []
+    result = {}
+    tempResult = []
     count = 0
     for i in npcChallengeData:
         callScene = i.get("call_scene", None)
         if (callScene and callScene != 332101):
             count += 1
             wrongInfo = str(count)+". npc ID为 "+str(i.get("npc_id", None))+" 的npc召唤场景不是 332101，请确认是否正常。"
-            result.append(wrongInfo)
+            tempResult.append(wrongInfo)
         else:
             continue
-    return result
+    if tempResult:
+        result["npc挑战"] = tempResult
+        return result
+    return False
 
 
 if __name__ == "__main__":

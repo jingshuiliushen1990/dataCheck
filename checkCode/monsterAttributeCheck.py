@@ -15,7 +15,8 @@ def getMonsterAttributeData(allExcelDictData):
 
 # 检查数据的合法性
 def monsterAttrCheckResult(allExcelDictData):
-    result = []
+    result = {}
+    tempResult = []
     usefulData = getMonsterAttributeData(allExcelDictData)
     if usefulData:
         count = 0
@@ -27,7 +28,7 @@ def monsterAttrCheckResult(allExcelDictData):
                     # print("*********** ikey = ", iKey, "iValue = ", iValue)
                     location = findLvErrorLocation(iValue)
                     wrongInfo = str(count)+ ". 怪物等级存在间隔等级，不连续，问题出现在第 " + str(location) + " 行"
-                    result.append(wrongInfo)
+                    tempResult.append(wrongInfo)
                 else:
                     continue
             else:
@@ -37,11 +38,13 @@ def monsterAttrCheckResult(allExcelDictData):
                     # print("*********** ikey = ", iKey, "iValue = ", iValue)
                     location = findNoLvErrorLocation(iValue)
                     wrongInfo = str(count) + ". 列 " + iKey + " 中出现高等级怪物的属性比低等级怪物的属性要差的情况，问题出现在第 " + str(location) + " 行"
-                    result.append(wrongInfo)
+                    tempResult.append(wrongInfo)
                 else:
                     continue
-    return result
-
+    if tempResult:
+        result["怪物等级属性表"] = tempResult
+        return result
+    return False
 
 
 if __name__ == "__main__":

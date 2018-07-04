@@ -2,7 +2,8 @@
 
 
 def sceneCheckResult(allExcelDictData):
-    result = []
+    result = {}
+    tempResult = []
     sceneData = allExcelDictData.get("场景列表", None)
     if sceneData:
         for i in sceneData:
@@ -20,8 +21,11 @@ def sceneCheckResult(allExcelDictData):
                 else:
                     temp.append("最小限制等级 = " + str(i["min_lv"]))
             if temp:
-                result.append(temp)
-    return result
+                tempResult.append(temp)
+    if tempResult:
+        result["场景检查"] = tempResult
+        return result
+    return False
 
 
 if __name__ == "__main__":

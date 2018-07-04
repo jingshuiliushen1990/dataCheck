@@ -2,7 +2,8 @@
 
 
 def titleCheckResult(allExcelDictData):
-    result = []
+    result = {}
+    tempResult = []
     titleData = allExcelDictData.get("称号列表", None)
     if titleData:
         for i in titleData:
@@ -22,8 +23,11 @@ def titleCheckResult(allExcelDictData):
                 # print("GGGGGGG", temp)
 
             if temp:
-                result.append(temp)
-    return result
+                tempResult.append(temp)
+    if tempResult:
+        result["称号检查"] = tempResult
+        return result
+    return False
 
 
 if __name__ == "__main__":

@@ -5,7 +5,8 @@ import re
 
 # 检查角色等级数据是否异常
 def roleLvCheckResult(allExcelDictData):
-    result = []
+    result = {}
+    tempResult = []
     lvData = allExcelDictData.get("转生升级", None)
     if lvData:
         dataDict = createCheckDict(lvData[0])
@@ -18,7 +19,7 @@ def roleLvCheckResult(allExcelDictData):
                     count += 1
                     location = findLvErrorLocation(usefulLvData[iKey])
                     wrongInfo = str(count) + ". 列 " + iKey + " 出现等级不连续异常， 具体位置是 " + str(location) + " 行"
-                    result.append(wrongInfo)
+                    tempResult.append(wrongInfo)
 
             if (iKey == "show_level_ch"):
                 newTestList1 = handleTestShow_level_ch(testList)
@@ -26,7 +27,7 @@ def roleLvCheckResult(allExcelDictData):
                     count += 1
                     location = findLvErrorLocation(handleShow_level_ch(usefulLvData[iKey]))
                     wrongInfo = str(count) + ". 列 " + iKey + " 出现显示等级不连续异常， 具体位置是 " + str(location) + " 行"
-                    result.append(wrongInfo)
+                    tempResult.append(wrongInfo)
 
             if (iKey == "max_exp"):
                 newTestList2 = sorted(usefulLvData[iKey])
@@ -34,7 +35,9 @@ def roleLvCheckResult(allExcelDictData):
                     count += 1
                     location = findNoLvErrorLocation(usefulLvData[iKey])
                     wrongInfo = str(count) + ". 列 " + iKey + " 出现升级经验消耗异常， 具体位置是 " + str(location) + " 行"
-                    result.append(wrongInfo)
+                    tempResult.append(wrongInfo)
+    if tempResult:
+        result["角色等级"] = tempResult
         return result
     else:
         return False

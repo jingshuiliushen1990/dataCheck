@@ -76,7 +76,7 @@ def findNoLvNoEqualErrorLocation(dataList):
 def findLvErrorLocation(dataList):
     result = []
     for i in range(len(dataList)):
-        print("%%%",dataList[i], "####",i+1)
+        # print("%%%",dataList[i], "####",i+1)
         if (dataList[i] != i+1):
             result.append(i + 4)
             # result.append(i)
