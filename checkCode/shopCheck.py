@@ -25,13 +25,13 @@ def currencyCheck(allExcelDictData, sheetName):
             if testKey:
                 if testKey != checkSheetList[sheetName]:
                     count += 1
-                    wrongInfo = str(count)+". 商品ID为 "+str(i.get("good_id", None))+ " 的商品单价货币类型又异常，异常值为： "+str(testKey)+", 请确认。\n"
+                    wrongInfo = str(count)+". 商品ID为 "+str(i.get("good_id", None))+ " 的商品单价货币类型又异常，异常值为： "+str(testKey)+", 请确认。"
                     tempList.append(wrongInfo)
                 else:
                     continue
             else:
                 count += 1
-                wrongInfo = str(count) + ". 商品ID为 " + str(i.get("good_id", None)) + " 的商品单价货币类型又异常，为空，没有配置数据，请确认。\n"
+                wrongInfo = str(count) + ". 商品ID为 " + str(i.get("good_id", None)) + " 的商品单价货币类型又异常，为空，没有配置数据，请确认。"
                 tempList.append(wrongInfo)
             result[sheetName] = tempList
         return result

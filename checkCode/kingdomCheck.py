@@ -32,15 +32,15 @@ def checkLvProsperityResult(allExcelDictData):
     tempList = []
     if prosperityCheckResult:
         count += 1
-        wrongInfo = str(count)+". 升级需要繁荣值存在异常，错误位置在： "+str(prosperityCheckResult)+" 请确认。\n"
+        wrongInfo = str(count)+". 升级需要繁荣值存在异常，错误位置在： "+str(prosperityCheckResult)+" 请确认。"
         tempList.append(wrongInfo)
     if playerLvCheckResult:
         count += 1
-        wrongInfo = str(count) + ". 玩家领奖等级从低到高的顺序存在异常，错误位置在： " + str(playerLvCheckResult) + " 请确认。\n"
+        wrongInfo = str(count) + ". 玩家领奖等级从低到高的顺序存在异常，错误位置在： " + str(playerLvCheckResult) + " 请确认。"
         tempList.append(wrongInfo)
     if playerLvData[-1] > playerLvMax:
         count += 1
-        wrongInfo = str(count) + ". 玩家领奖等级存在异常，领奖等级大于玩家可以达到的最高等级，请确认。\n"
+        wrongInfo = str(count) + ". 玩家领奖等级存在异常，领奖等级大于玩家可以达到的最高等级，请确认。"
         tempList.append(wrongInfo)
     if tempList:
         result["王国纪元录"] = tempList
@@ -74,12 +74,12 @@ def checkEventExtractResult(allExcelDictData):
             tempList.append(tempDict[j["open_day"]][0])
         else:
             count += 1
-            wrongInfo = str(count)+". 开服天数为 "+str(j["open_day"])+" 的王国事件配置的event 1~~7 不是一样的，出现不一致，请检查。\n"
+            wrongInfo = str(count)+". 开服天数为 "+str(j["open_day"])+" 的王国事件配置的event 1~~7 不是一样的，出现不一致，请检查。"
             tempResult.append(wrongInfo)
     if not checkTwoList(tempList[:-1], tempList[-1]):
         # print("$$$$$$$", tempList[:-1], " ******** ",tempList[-1])
         count += 1
-        wrongInfo = str(count)+". 最后一行的的王国事件不是由前面几天的事件组成，请与策划确认。\n"
+        wrongInfo = str(count)+". 最后一行的的王国事件不是由前面几天的事件组成，请与策划确认。"
         tempResult.append(wrongInfo)
     if tempResult:
         result["王国事件抽取"] = tempResult

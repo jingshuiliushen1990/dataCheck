@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 from generalInterface.generalApi import *
+import re
 
 # 个人竞技场检查
 def areanCheckResult(allExcelDictData):
@@ -27,7 +28,7 @@ def robotCheckResult(allExcelDictData):
         rankCheck = checkRankResult(usefulRobotData['rank'])
         if rankCheck:
             count += 1
-            wrongInfo = str(count)+". 个人竞技场_机器人 表中排名为 "+str(rankCheck)+" 的地方出现断点，请策划确认是否正常。\n"
+            wrongInfo = str(count)+". 个人竞技场_机器人 表中排名为 "+str(rankCheck)+" 的地方出现断点，请策划确认是否正常。"
             tempResult.append(wrongInfo)
         keyList = ["level", "real_lv"]
         for ikey in keyList:
@@ -37,7 +38,7 @@ def robotCheckResult(allExcelDictData):
             if location:
                 count += 1
                 wrongInfo = str(count)+". 个人竞技场_机器人 表中 列名为 "+str(ikey)+" 的等级出现异常，异常位置在 "+ str(location)+\
-                "行，请策划确认是否正常。\n"
+                "行，请策划确认是否正常。"
                 tempResult.append(wrongInfo)
             else:
                 continue
@@ -53,7 +54,12 @@ def checkRankResult(rankList):
     tempList = []
     for i in rankList:
         if ":" not in i:
-            tempList.append(int(i))
+            # print("#####", i)
+            number = re.sub("\D", "", i)
+            if number:
+                tempList.append(int(i))
+            else:
+                tempList.append(None)
         else:
             temp = list(map(int,i.split(":")))   # 把字符串列表转化为int列表，便于后面的比较计算
             tempList.extend(temp)
@@ -81,7 +87,7 @@ def dailyRewardCheckResult(allExcelDictData):
         rankCheck = checkRankResult(usefulRewardData['rank'])
         if rankCheck:
             count += 1
-            wrongInfo = str(count) + ". 个人竞技场_每日奖励 表中在排名为 " + str(rankCheck) + " 的地方出现断点，请策划确认是否正常。\n"
+            wrongInfo = str(count) + ". 个人竞技场_每日奖励 表中在排名为 " + str(rankCheck) + " 的地方出现断点，请策划确认是否正常。"
             tempResult.append(wrongInfo)
         tempList = []
         for i in rewardCheckData:
@@ -92,13 +98,13 @@ def dailyRewardCheckResult(allExcelDictData):
         pointLocation = checkPointID(pointId, 2001)
         if pointLocation:
             count += 1
-            wrongInfo = str(count) + ". 个人竞技场_每日奖励 表中积分奖励ID不是 2001 ，出现位置是: " + str(pointLocation) + "行， 请策划确认是否正常。\n"
+            wrongInfo = str(count) + ". 个人竞技场_每日奖励 表中积分奖励ID不是 2001 ，出现位置是: " + str(pointLocation) + "行， 请策划确认是否正常。"
             tempResult.append(wrongInfo)
         amountList = usefulPointData["amount"]
         amountLocation = findReverseErrorLocation(amountList)
         if amountLocation:
             count += 1
-            wrongInfo = str(count) + ". 个人竞技场_每日奖励 表中积分奖励数量不是按照正常规则配置，出现位置是: " + str(amountLocation) + "行， 请策划确认是否正常。\n"
+            wrongInfo = str(count) + ". 个人竞技场_每日奖励 表中积分奖励数量不是按照正常规则配置，出现位置是: " + str(amountLocation) + "行， 请策划确认是否正常。"
             tempResult.append(wrongInfo)
         if tempResult:
             result["个人竞技场_每日奖励"] = tempResult

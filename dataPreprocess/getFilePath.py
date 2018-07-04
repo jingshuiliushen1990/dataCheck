@@ -7,8 +7,8 @@ judgeList = ["AI_任务列表.xls", "CBT充值返还.xls", "C场景背景音效.
 
 # 读取文件获得文件路径，对不正确的路径分别返回不同的结果
 def getFilePath():
-    path = open("../filePath.txt", 'r').read()
-    # path = open("./filePath.txt", 'r').read()
+    # path = open("../filePath.txt", 'r').read()
+    path = open("./filePath.txt", 'r').read()
     # print("path = ", path)
     # filePath = unicode(path, "utf-8")
 

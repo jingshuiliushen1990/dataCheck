@@ -21,7 +21,7 @@ def growthFundCheckResult(allExcelDictData):
             errorLocation = findNoLvNoEqualErrorLocation(testData)
         if errorLocation:
             count += 1
-            wrongInfo = str(count) + ". 成长基金等级表中 "+str(checkKeyDict[ikey])+" 列中出现异常情况，位置是 "+str(errorLocation)+" 行，请策划确认是否正确。\n"
+            wrongInfo = str(count) + ". 成长基金等级表中 "+str(checkKeyDict[ikey])+" 列中出现异常情况，位置是 "+str(errorLocation)+" 行，请策划确认是否正确。"
             tempResult.append(wrongInfo)
 
     rewardData = preprocessRewardList(usefulData["rewards"])
@@ -30,12 +30,12 @@ def growthFundCheckResult(allExcelDictData):
     rewardIDErrorLocation = checkPointID(secondUsefulData["id"], 1002)
     if rewardIDErrorLocation:
         count += 1
-        wrongInfo = str(count) + ". 成长基金等级 表中返还货币ID不是 1002 ，出现位置是: " + str(rewardIDErrorLocation) + " 行， 请策划确认是否正常。\n"
+        wrongInfo = str(count) + ". 成长基金等级 表中返还货币ID不是 1002 ，出现位置是: " + str(rewardIDErrorLocation) + " 行， 请策划确认是否正常。"
         tempResult.append(wrongInfo)
     rewardAmountErrorLocation = findNoLvErrorLocation(secondUsefulData["amount"])
     if rewardAmountErrorLocation:
         count += 1
-        wrongInfo = str(count) + ". 成长基金等级 表中返还货币数量异常 ，出现位置是: " + str(rewardAmountErrorLocation) + " 行， 请策划确认是否正常。\n"
+        wrongInfo = str(count) + ". 成长基金等级 表中返还货币数量异常 ，出现位置是: " + str(rewardAmountErrorLocation) + " 行， 请策划确认是否正常。"
         tempResult.append(wrongInfo)
 
     if tempResult:

@@ -23,12 +23,12 @@ def payGoodsCheckResult(allExcelDictData):
         usefulData = saveData2Dict(payGoodsData[:6], goodsKeyDict)
         if (len(usefulData["id"]) != len(set(usefulData["id"]))):
             count += 1
-            wrongInfo = str(count)+". 充值商品表中 商品ID（字符串）列出现ID重复，请确认。\n"
+            wrongInfo = str(count)+". 充值商品表中 商品ID（字符串）列出现ID重复，请确认。"
             tempResult.append(wrongInfo)
         goodIDLocation = findLvErrorLocation(usefulData["good_id"])
         if goodIDLocation:
             count += 1
-            wrongInfo = str(count)+". 充值商品表中 商品ID（数字）列出现ID异常，出错位置是 "+str(goodIDLocation)+" 行，请确认。\n"
+            wrongInfo = str(count)+". 充值商品表中 商品ID（数字）列出现ID异常，出错位置是 "+str(goodIDLocation)+" 行，请确认。"
             tempResult.append(wrongInfo)
         testList = [6,30,98,198,328,648]
         testList1 = [60,300,980,1980,3280,6480]
@@ -39,7 +39,7 @@ def payGoodsCheckResult(allExcelDictData):
                 if checkData != testList:
                     count += 1
                     errorLocation = getErrorLocation(checkData, testList)
-                    wrongInfo = str(count) +". 充值商品列表 "+str(ikey)+" 列出现配置问题，具体位置在 "+str(errorLocation)+" 行， 请与策划确认。\n"
+                    wrongInfo = str(count) +". 充值商品列表 "+str(ikey)+" 列出现配置问题，具体位置在 "+str(errorLocation)+" 行， 请与策划确认。"
                     tempResult.append(wrongInfo)
                 else:
                     continue
@@ -50,7 +50,7 @@ def payGoodsCheckResult(allExcelDictData):
                     count += 1
                     errorLocation = getErrorLocation(descCheckData, testList1)
                     wrongInfo = str(count) + ". 充值商品列表 " + str(ikey) + " 列出现配置问题，具体位置在 " + str(
-                        errorLocation) + " 行， 请与策划确认。\n"
+                        errorLocation) + " 行， 请与策划确认。"
                     tempResult.append(wrongInfo)
                 else:
                     continue
@@ -60,12 +60,12 @@ def payGoodsCheckResult(allExcelDictData):
         itemIdCheck = checkPointID(sellItemUsefulData["id"], 8)
         if itemIdCheck:
             count += 1
-            wrongInfo = str(count) +". 充值商品列表 出售物品 列中物品ID配置有误，具体位置在 "+str(itemIdCheck)+" 行， 请与策划确认。\n"
+            wrongInfo = str(count) +". 充值商品列表 出售物品 列中物品ID配置有误，具体位置在 "+str(itemIdCheck)+" 行， 请与策划确认。"
             tempResult.append(wrongInfo)
         if (sellItemUsefulData["amount"] != testList1):
             count += 1
             errorLocation1 = getErrorLocation(sellItemUsefulData["amount"], testList1)
-            wrongInfo = str(count) +". 充值商品列表 出售物品 列中物品数量配置有误，具体位置在 "+str(errorLocation1)+" 行， 请与策划确认。\n"
+            wrongInfo = str(count) +". 充值商品列表 出售物品 列中物品数量配置有误，具体位置在 "+str(errorLocation1)+" 行， 请与策划确认。"
             tempResult.append(wrongInfo)
     if tempResult:
         result["充值商品列表"] = tempResult
