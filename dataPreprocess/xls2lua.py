@@ -23,7 +23,7 @@ from collections import defaultdict
 from xlrd import open_workbook, XLRDError
 import unicodecsv as csv
 
-errorLog = open("../setuplog.txt", 'a', encoding="utf-8")
+errorLog = open("./setuplog.txt", 'a', encoding="utf-8")
 
 if not sys.stdout.encoding:
     reload(sys)
@@ -174,7 +174,7 @@ def cell_to_value(col_type, value):
         value = {}
         for i, j in enumerate(template_lst):
             if i >= len(value_lst):
-                print('ERROR: struct data no empty, %s: %s' % (col_type, value))
+                # print('ERROR: struct data no empty, %s: %s' % (col_type, value))
                 raise Exception('struct不允许默认值, 如果有必要尝试使用xstruct')
             if j.find("[") != -1 and j.find("]") != -1:
                 key = j.split("[")[1].split("]")[0]
@@ -207,7 +207,7 @@ def cell_to_value(col_type, value):
                         value = True
                     else:
                         errmsg = "不合法的bool值，可选[true | false | 0 | 1] 实际值->(%s)" % value
-                        print(errmsg)
+                        # print(errmsg)
                         raise Exception(errmsg)
                 except:
                     raise
@@ -219,7 +219,7 @@ def cell_to_value(col_type, value):
                         value = False
                     else:
                         errmsg = "不合法的bool值，可选[true | false | 0 | 1] 实际值->(%s)" % value
-                        print(errmsg)
+                        # print(errmsg)
                         raise Exception(errmsg)
         elif col_type == 'float':
             try:
@@ -332,7 +332,7 @@ def sheet_to_dict(sheet):
 
             col_types.append(col_type)
         except:
-            print(sys.stderr.write('ERROR: row:%s column:[%s] \n' % (i + 1, column)))
+            # print(sys.stderr.write('ERROR: row:%s column:[%s] \n' % (i + 1, column)))
             # print >> sys.stderr.write('ERROR: row:%s column:[%s] \n' % (i + 1, column))
             raise
 
@@ -441,7 +441,7 @@ def sheet_to_dict(sheet):
         except:
             errorLog.write("@@@@@@@@@  WrongInfo: " + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + '\n')
             errorLog.write('ERROR: row: %s column: %s[%s]\n' % (rownum + 1, i, title_row[i]))
-            print(sys.stderr.write('ERROR: row: %s column: %s[%s]\n' % (rownum + 1, i, title_row[i])))
+            # print(sys.stderr.write('ERROR: row: %s column: %s[%s]\n' % (rownum + 1, i, title_row[i])))
             # print >> sys.stderr.write('ERROR: row: %s column: %s[%s]\n' % (rownum + 1, i, title_row[i]))
             raise
         yield data
@@ -559,7 +559,7 @@ def convet(xls_name, output, file_names_):
             errorLog.write(str('converting...: '+xls_name+"   "+sheet.name)+'\n')
             errorLog.write("******"*20+'\n')
             # print('converting...: ', xls_name, "   ", sheet.name)
-            print(sys.stderr.write('convert FAILED ' + xls_name.encode(output_encoding) + ' ' + sheet.name.encode(output_encoding) + '\n'))
+            # print(sys.stderr.write('convert FAILED ' + xls_name.encode(output_encoding) + ' ' + sheet.name.encode(output_encoding) + '\n'))
             # print >> sys.stderr.write('convert FAILED ' + xls_name.encode(output_encoding) + ' ' + sheet.name.encode(output_encoding) + '\n')
             raise
     return lua_list
@@ -710,8 +710,8 @@ def convet_enumerate(xls_name, path):
                     name_to_id = pre_name_to_id
                 enum_tbl[enum_name] = name_to_id
             except Exception as e:
-                print(e)
-                print('enum error:' + row['file_name'])
+                # print(e)
+                # print('enum error:' + row['file_name'])
                 # print(sys.stderr.write('enum error:' + row['file_name'] + '\n'))
                 # print >> sys.stderr.write('enum error:' + row['file_name'] + '\n')
                 raise
@@ -763,6 +763,7 @@ def remove_old_file(root):
 
 # 获得所有excel表格得到的字典
 def getAllExcelDictData(iFilePath):
+    print(" 程序正在执行中……………………")
     # PATH = '../resource/'
     PATH = iFilePath
     # # 属不同的目录

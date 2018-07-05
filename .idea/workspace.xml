@@ -3,18 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="206ed45a-61d0-4b0c-92f4-2035ec20974b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkCode/growthFund.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/growthFund.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkCode/monsterAttributeCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/monsterAttributeCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkCode/npcChallengeCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/npcChallengeCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkCode/payCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/payCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkCode/roleLvCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/roleLvCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkCode/sceneCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/sceneCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkCode/talentSkillCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/talentSkillCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkCode/titleCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/titleCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkCode/tradeCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/tradeCheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generalInterface/generalApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/generalInterface/generalApi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkCode/shopCheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/checkCode/shopCheck.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPreprocess/loadAllExcelData.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPreprocess/loadAllExcelData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPreprocess/xls2lua.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPreprocess/xls2lua.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/开发情况.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/开发情况.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setuplog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/setuplog.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,8 +28,8 @@
     <SUITE FILE_PATH="coverage/M1P3Tool$growthFund.coverage" NAME="growthFund Coverage Results" MODIFIED="1530623773323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
     <SUITE FILE_PATH="coverage/M1P3Tool$titleCheck.coverage" NAME="titleCheck Coverage Results" MODIFIED="1527915844774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/serviceCode" />
     <SUITE FILE_PATH="coverage/M1P3Tool$talentSkillCheck.coverage" NAME="talentSkillCheck Coverage Results" MODIFIED="1530355816762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
-    <SUITE FILE_PATH="coverage/M1P3Tool$main.coverage" NAME="main Coverage Results" MODIFIED="1530018956655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/M1P3Tool$arenaCheck.coverage" NAME="arenaCheck Coverage Results" MODIFIED="1530619525231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
+    <SUITE FILE_PATH="coverage/M1P3Tool$main.coverage" NAME="main Coverage Results" MODIFIED="1530782484774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/M1P3Tool$extract.coverage" NAME="extract Coverage Results" MODIFIED="1526625816630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
     <SUITE FILE_PATH="coverage/M1P3Tool$loadAllData.coverage" NAME="loadAllData Coverage Results" MODIFIED="1527164949096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
     <SUITE FILE_PATH="coverage/M1P3Tool$shopCheck.coverage" NAME="shopCheck Coverage Results" MODIFIED="1530515272401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkCode" />
@@ -51,38 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="talentSkillCheck.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkCode/talentSkillCheck.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="titleCheck.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkCode/titleCheck.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tradeCheck.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/checkCode/tradeCheck.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="418">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#23#82#0" expanded="true" />
               </folding>
@@ -90,14 +56,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payCheck.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkCode/payCheck.py">
+      <file leaf-file-name="xls2lua.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dataPreprocess/xls2lua.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="773" column="27" selection-start-line="773" selection-start-column="27" selection-end-line="773" selection-end-column="27" />
+              <folding>
+                <element signature="e#15#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shopCheck.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/checkCode/shopCheck.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getFilePath.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataPreprocess/getFilePath.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-              <folding>
-                <element signature="e#24#33#0" expanded="true" />
-              </folding>
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -132,6 +116,10 @@
       <find>convet_enumerate</find>
       <find>'id': 20</find>
       <find>result</find>
+      <find>re.sub</find>
+      <find>\n</find>
+      <find>print</find>
+      <find>setup</find>
     </findStrings>
     <replaceStrings>
       <replace>temp</replace>
@@ -170,15 +158,11 @@
         <option value="$PROJECT_DIR$/serviceCode/kingdomCheck.py" />
         <option value="$PROJECT_DIR$/source/getFilePath.py" />
         <option value="$PROJECT_DIR$/checkCode/monsterTypeCheck.py" />
-        <option value="$PROJECT_DIR$/dataPreprocess/getFilePath.py" />
-        <option value="$PROJECT_DIR$/checkCode/shopCheck.py" />
         <option value="$PROJECT_DIR$/setuplog.txt" />
         <option value="$PROJECT_DIR$/checkCode/kingdomCheck.py" />
-        <option value="$PROJECT_DIR$/checkCode/arenaCheck.py" />
         <option value="$PROJECT_DIR$/checkCode/growthFund.py" />
         <option value="$PROJECT_DIR$/generalInterface/generalApi.py" />
         <option value="$PROJECT_DIR$/checkCode/payCheck.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/checkCode/monsterAttributeCheck.py" />
         <option value="$PROJECT_DIR$/checkCode/npcChallengeCheck.py" />
         <option value="$PROJECT_DIR$/checkCode/roleLvCheck.py" />
@@ -186,6 +170,11 @@
         <option value="$PROJECT_DIR$/checkCode/talentSkillCheck.py" />
         <option value="$PROJECT_DIR$/checkCode/titleCheck.py" />
         <option value="$PROJECT_DIR$/checkCode/tradeCheck.py" />
+        <option value="$PROJECT_DIR$/dataPreprocess/getFilePath.py" />
+        <option value="$PROJECT_DIR$/checkCode/arenaCheck.py" />
+        <option value="$PROJECT_DIR$/checkCode/shopCheck.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/dataPreprocess/xls2lua.py" />
       </list>
     </option>
   </component>
@@ -196,9 +185,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-34" />
-    <option name="y" value="83" />
-    <option name="width" value="1359" />
+    <option name="x" value="-1588" />
+    <option name="y" value="68" />
+    <option name="width" value="1458" />
     <option name="height" value="920" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -209,6 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,13 +214,12 @@
             <path>
               <item name="M1P3Tool" type="b2602c69:ProjectViewProjectNode" />
               <item name="M1P3Tool" type="462c0819:PsiDirectoryNode" />
-              <item name="generalInterface" type="462c0819:PsiDirectoryNode" />
+              <item name="dataPreprocess" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,7 +247,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.monsterAttributeCheck">
+  <component name="RunManager" selected="Python.main">
     <configuration name="arenaCheck" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="M1P3Tool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -297,25 +286,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="kingdomCheck" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="M1P3Tool" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/checkCode" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/checkCode/kingdomCheck.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="loadAllData" type="PythonConfigurationType" factoryName="Python">
       <module name="M1P3Tool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -330,6 +300,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="C:\Users\leijing\Desktop\M1P3Tool\source\loadAllExcelData.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="M1P3Tool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -414,19 +403,19 @@
     <list>
       <item itemvalue="Python.xls2lua" />
       <item itemvalue="Python.loadAllData" />
-      <item itemvalue="Python.kingdomCheck" />
       <item itemvalue="Python.arenaCheck" />
       <item itemvalue="Python.growthFund" />
       <item itemvalue="Python.payCheck" />
       <item itemvalue="Python.monsterAttributeCheck" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.monsterAttributeCheck" />
         <item itemvalue="Python.payCheck" />
         <item itemvalue="Python.growthFund" />
         <item itemvalue="Python.arenaCheck" />
-        <item itemvalue="Python.kingdomCheck" />
       </list>
     </recent_temporary>
   </component>
@@ -511,7 +500,21 @@
       <option name="project" value="LOCAL" />
       <updated>1530623846223</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="完成交易物品检查&#10;对所有返回结果进行检查">
+      <created>1530689070255</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1530689070255</updated>
+    </task>
+    <task id="LOCAL-00012" summary="全部写完">
+      <created>1530709363916</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1530709363916</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -524,7 +527,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1851" height="1096" extended-state="6" />
+    <frame x="-1928" y="-8" width="1867" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -532,11 +535,12 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.49692908" weight="0.21943574" />
-      <window_info anchor="bottom" x="-1371" y="236" width="901" height="617" id="Run" order="6" type="WINDOWED" weight="0.5015432" />
+      <window_info anchor="bottom" x="-1364" y="261" width="1040" height="514" id="Run" order="6" type="WINDOWED" weight="0.5015432" />
       <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1524288" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15107913" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="1" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32985386" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -548,31 +552,30 @@
       <window_info anchor="right" id="Data View" order="0" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32985386" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15075377" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" x="138" y="219" width="1170" height="596" id="Run" order="6" type="WINDOWED" weight="0.5015432" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Data View" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="bottom" x="138" y="219" width="1170" height="596" id="Run" order="6" type="WINDOWED" weight="0.5015432" />
+      <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.49692908" weight="0.21943574" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32985386" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15075377" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5030709" side_tool="true" weight="0.33019853" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="right" id="Database" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.49692908" weight="0.21943574" />
+      <window_info id="Favorites" order="0" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +594,9 @@
     <MESSAGE value="完成个人竞技场的检查" />
     <MESSAGE value="修改个人竞技场检查代码中的 bug" />
     <MESSAGE value="完成成长基金的检查" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成成长基金的检查" />
+    <MESSAGE value="完成交易物品检查&#10;对所有返回结果进行检查" />
+    <MESSAGE value="全部写完" />
+    <option name="LAST_COMMIT_MESSAGE" value="全部写完" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -606,7 +611,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/argumentCheck.py" />
+    <entry file="file://$PROJECT_DIR$/result.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dataPreprocess/xls2lua.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14953">
@@ -720,57 +731,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataPreprocess/xls2lua.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="767" column="14" selection-start-line="767" selection-start-column="14" selection-end-line="767" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataPreprocess/loadAllDictData.py" />
-    <entry file="file://$PROJECT_DIR$/filePath.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/status" />
-    <entry file="file://$PROJECT_DIR$/dataPreprocess/getFilePath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setuplog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generalInterface/generalApi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="641">
           <caret line="110" column="32" lean-forward="true" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkCode/calendarCheck.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkCode/arenaCheck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="95" column="40" lean-forward="true" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkCode/growthFund.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -795,16 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#23#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkCode/roleLvCheck.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -822,27 +778,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkCode/shopCheck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkCode/payCheck.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state relative-caret-position="304">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkCode/talentSkillCheck.py">
+    <entry file="file://$PROJECT_DIR$/filePath.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkCode/arenaCheck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+          <folding>
+            <element signature="e#24#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkCode/growthFund.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkCode/tradeCheck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -853,10 +826,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkCode/tradeCheck.py">
+    <entry file="file://$PROJECT_DIR$/checkCode/talentSkillCheck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkCode/shopCheck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataPreprocess/getFilePath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setuplog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#23#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataPreprocess/xls2lua.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="773" column="27" selection-start-line="773" selection-start-column="27" selection-end-line="773" selection-end-column="27" />
+          <folding>
+            <element signature="e#15#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

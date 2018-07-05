@@ -16,5 +16,5 @@ if __name__ == "__main__":
     print(dataPreprocess.xls2lua.getAllExcelDictData(dataPreprocess.getFilePath.getFilePath()))
     end = datetime.datetime.now()
 
-    print("执行计算共用了 ",end-start," 秒！")
+    # print("执行计算共用了 ",end-start," 秒！")
 

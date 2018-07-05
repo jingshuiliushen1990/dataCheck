@@ -13,7 +13,7 @@ from checkCode.npcChallengeCheck import npcChallengeCheckResult
 from checkCode.roleLvCheck import roleLvCheckResult
 from checkCode.tradeCheck import tradeCheckResult
 from checkCode.payCheck import payCheckResult
-
+import time
 
 checkList = ["sceneCheckResult", "titleCheckResult", "areanCheckResult", "growthFundCheckResult", "kingdomCheckResult",
              "talentSkillCheckResult", "monsterAttrCheckResult", "shopCheckResult", "npcChallengeCheckResult",
@@ -34,6 +34,8 @@ with open("./result.txt",'w') as fData:
                     fData.write(str(i)+"\n")
         fData.write("\n")
 
+print("程序执行完毕。请查看result或者setupLog日志。")
+time.sleep(5)
 
 
 
