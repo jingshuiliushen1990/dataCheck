@@ -52,3 +52,11 @@ npc挑战:
 充值商品列表:
 1. 充值商品列表 desc 列出现配置问题，具体位置在 [] 行， 请与策划确认。
 
+
+test code 
+what is your name?
+hello
+nihao 
+fuck 
+what happend?
+
