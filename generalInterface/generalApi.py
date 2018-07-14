@@ -116,3 +116,19 @@ def checkPointID(pointList, ID):
         else:
             continue
     return result
+
+
+# 检查两个列表的元素都相同
+def check2ListEqual(list1, list2):
+    if not (list1 and list2):
+        return False
+    elif (len(list1) != len(list2)):
+        return False
+    else:
+        for i in list1:
+            if i not in list2:
+                return False
+            else:
+                continue
+        return True
+

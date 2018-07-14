@@ -1,18 +1,18 @@
 #-*- coding:utf-8 -*-
 
 from dataPreprocess.loadAllDictData import allExcelDictData
-from checkCode.sceneCheck import sceneCheckResult
-from checkCode.titleCheck import titleCheckResult
-from checkCode.arenaCheck import areanCheckResult
-from checkCode.growthFund import growthFundCheckResult
-from checkCode.kingdomCheck import kingdomCheckResult
-from checkCode.talentSkillCheck import talentSkillCheckResult
-from checkCode.monsterAttributeCheck import monsterAttrCheckResult
-from checkCode.shopCheck import shopCheckResult
-from checkCode.npcChallengeCheck import npcChallengeCheckResult
-from checkCode.roleLvCheck import roleLvCheckResult
-from checkCode.tradeCheck import tradeCheckResult
-from checkCode.payCheck import payCheckResult
+from dataCheck.sceneCheck import sceneCheckResult
+from dataCheck.titleCheck import titleCheckResult
+from dataCheck.arenaCheck import areanCheckResult
+from dataCheck.growthFund import growthFundCheckResult
+from dataCheck.kingdomCheck import kingdomCheckResult
+from dataCheck.talentSkillCheck import talentSkillCheckResult
+from dataCheck.monsterAttributeCheck import monsterAttrCheckResult
+from dataCheck.shopCheck import shopCheckResult
+from dataCheck.npcChallengeCheck import npcChallengeCheckResult
+from dataCheck.roleLvCheck import roleLvCheckResult
+from dataCheck.tradeCheck import tradeCheckResult
+from dataCheck.payCheck import payCheckResult
 import time
 
 checkList = ["sceneCheckResult", "titleCheckResult", "areanCheckResult", "growthFundCheckResult", "kingdomCheckResult",
