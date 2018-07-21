@@ -20,7 +20,7 @@ def payGoodsCheckResult(allExcelDictData):
     payGoodsData = allExcelDictData.get("充值商品列表", None)
     if payGoodsData:
         goodsKeyDict = createCheckDict(payGoodsData[0])
-        usefulData = saveData2Dict(payGoodsData[:6], goodsKeyDict)
+        usefulData = saveData2Dict(payGoodsData, goodsKeyDict)
         if (len(usefulData["id"]) != len(set(usefulData["id"]))):
             count += 1
             wrongInfo = str(count)+". 充值商品表中 商品ID（字符串）列出现ID重复，请确认。"
@@ -36,25 +36,27 @@ def payGoodsCheckResult(allExcelDictData):
         for ikey in checkList:
             checkData = usefulData[ikey]
             if (ikey in ["goods_score", "rmb"]):
-                if checkData != testList:
+                if checkData[:6] != testList:
                     count += 1
-                    errorLocation = getErrorLocation(checkData, testList)
+                    errorLocation = getErrorLocation(checkData[:6], testList)
                     wrongInfo = str(count) +". 充值商品列表 "+str(ikey)+" 列出现配置问题，具体位置在 "+str(errorLocation)+" 行， 请与策划确认。"
                     tempResult.append(wrongInfo)
-                else:
-                    continue
             else:
-                descCheckData = getDescNumber(checkData)
-                # print("^^^^", descCheckData)
-                if descCheckData != testList:
+                descCheckData = getDescNumber(checkData[:6])
+                # print("^^^^", descCheckData, " &&&&&& ",descCheckData != testList)
+                if descCheckData != testList1:
                     count += 1
                     errorLocation = getErrorLocation(descCheckData, testList1)
-                    wrongInfo = str(count) + ". 充值商品列表 " + str(ikey) + " 列出现配置问题，具体位置在 " + str(
-                        errorLocation) + " 行， 请与策划确认。"
+                    wrongInfo = str(count) + ". 充值商品列表 " + str(ikey) + " 列出现配置问题，具体位置在 " + str(errorLocation) + " 行， 请与策划确认。"
                     tempResult.append(wrongInfo)
-                else:
-                    continue
-        sellItemData = usefulData["sell_item"]
+        # print("$$$$$$$$$$$  ",usefulData["goods_score"]," %%%% ", usefulData["rmb"])
+        if (usefulData["goods_score"] != usefulData["rmb"]):
+            count += 1
+            errorLocation = getErrorLocation(usefulData["goods_score"], usefulData["rmb"])
+            wrongInfo = str(count) + ". 充值商品列表 充值积分 和 人民币 列出现不相同的问题，具体位置在 " + str(errorLocation) + " 行， 请与策划确认。"
+            tempResult.append(wrongInfo)
+
+        sellItemData = usefulData["sell_item"][:6]
         sellItemKeyDict = createCheckDict(sellItemData[0])
         sellItemUsefulData = saveData2Dict(sellItemData, sellItemKeyDict)
         itemIdCheck = checkPointID(sellItemUsefulData["id"], 8)
