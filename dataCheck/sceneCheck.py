@@ -23,10 +23,9 @@ def sceneCheckResult(allExcelDictData):
             if temp:
                 tempResult.append(temp)
     if tempResult:
-        result["场景检查"] = tempResult
+        result["场景"] = tempResult
         return result
     return False
-
 
 if __name__ == "__main__":
     from dataPreprocess.loadAllDictData import allExcelDictData

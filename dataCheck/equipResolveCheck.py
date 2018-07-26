@@ -25,6 +25,8 @@ def checkEquipResolveResult(allExcelDictData):
                             # print("######## ", getIDFromList(i.get("gifts", None)), " **** ",idData["gifts"])
                             if not check2ListEqual(getIDFromList(i.get("gifts", None)), idData["gifts"]):
                                 tempResult.append(("未鉴定装备分解得到的物品与鉴定后ID为 "+str(id)+" 的装备分解得到的物品不一样。"))
+                            if not check2ListEqual(getIDFromList(i.get("gifts2", None)), idData["gifts2"]):
+                                tempResult.append(("未鉴定装备熔解得到的物品与鉴定后ID为 "+str(id)+" 的装备分解得到的物品不一样。"))
                             if not idData["isResolve"]:
                                 tempResult.append("装备表中ID为 "+str(id)+" 的装备不可分解，请确认是否正确。")
                             if not idData["gifts"]:
@@ -44,6 +46,7 @@ def getEquipData(allExcelDictData):
             usage = i.get("usage_ways", None)
             tempResult["isResolve"] = checkEquipUsege(usage)
             tempResult["gifts"] = getIDFromList(i.get("gifts", None))
+            tempResult["gifts2"] = getIDFromList(i.get("gifts2", None))
             result[i.get("id", None)] = tempResult
         return result
     return False
