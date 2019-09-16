@@ -39,8 +39,8 @@ checkList = {"sceneCheckResult":"场景",
               "checkEquipResolveResult":"未鉴定装备分解"
               }
 
-# robotUrl1 = "https://oapi.dingtalk.com/robot/send?access_token=9fe749815aaa826996e58195ecf9ea97a7b6ac0eaaae943f71ca9431fbcb2e0a"
-robotUrl1 = "https://oapi.dingtalk.com/robot/send?access_token=0c2cf80264ba7714c6cedcf6d15664718742dad31a7c0ad7ce55b7b56d1a2bc7"
+# robotUrl1 = "test1"
+robotUrl1 = "test2"
 
 # with open("./result.txt",'w') as fData:
 #     for i in checkList.keys():
